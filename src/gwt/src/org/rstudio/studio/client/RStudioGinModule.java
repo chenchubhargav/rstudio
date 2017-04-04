@@ -194,6 +194,7 @@ import org.rstudio.studio.client.workbench.views.source.SourceSatelliteWindow;
 import org.rstudio.studio.client.workbench.views.source.SourceWindow;
 import org.rstudio.studio.client.workbench.views.source.SourceWindowManager;
 import org.rstudio.studio.client.workbench.views.source.editors.EditingTargetSource;
+import org.rstudio.studio.client.workbench.views.source.editors.explorer.ObjectExplorerPresenter;
 import org.rstudio.studio.client.workbench.views.source.editors.profiler.ProfilerPresenter;
 import org.rstudio.studio.client.workbench.views.source.editors.profiler.model.ProfilerServerOperations;
 import org.rstudio.studio.client.workbench.views.source.editors.text.AceEditor;
@@ -240,6 +241,7 @@ public class RStudioGinModule extends AbstractGinModule
       bind(SatelliteManager.class).in(Singleton.class);
       bind(AskPassManager.class).in(Singleton.class);
       bind(ProfilerPresenter.class).in(Singleton.class);
+      bind(ObjectExplorerPresenter.class).asEagerSingleton();
       bind(WorkbenchContext.class).asEagerSingleton();
       bind(DependencyManager.class).asEagerSingleton();
       bind(WorkbenchListManager.class).asEagerSingleton();
